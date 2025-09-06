@@ -34,6 +34,8 @@ def get_response(user_input: str):
             "🎓 Studies show that students who join clubs and societies in university tend to perform better academically and socially."
         ]
         return {"type": "text", "content": random.choice(facts)}
+    elif any(kw in text for kw in ["thanks", "thank you", "thx", "ty"]):
+        return {"type": "text", "content": "😊 You're welcome! Happy to help."}
 
     # University-related Q&A
     elif "map" in text or "utar map" in text:
