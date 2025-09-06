@@ -9,6 +9,14 @@ st.title("🎓 Your CampusMate")
 if "messages" not in st.session_state:
     st.session_state.messages = []  # list of {"role": "user"/"assistant", "content": str, "type": "text"/"image"}
 
+ # initial welcome message
+    welcome_msg = {
+        "role": "assistant",
+        "content": "🎓 Hi! I'm your CampusMate, your university  assistant. You can ask me question about UTAR, e.g., 'Where is the library?'",
+        "type": "text"
+    }
+    st.session_state.messages.append(welcome_msg)
+
 # simple rule based response
 def get_response(user_input: str):
     text = user_input.lower()
