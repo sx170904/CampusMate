@@ -12,7 +12,7 @@ if "messages" not in st.session_state:
 # simple rule based response
 def get_response(user_input: str):
     text = user_input.lower()
-    words = text.split()  # split into individual words
+    words = text.split()  
 
     # Small talk
     if any(kw in words for kw in ["hi", "hello", "hey"]):
