@@ -21,7 +21,7 @@ def get_response(user_input: str):
         return {"type": "text", "content": "😊 I'm doing great, thanks for asking! How about you?"}
     elif any(kw in words for kw in ["good", "fine", "great", "okay", "happy", "excited"]):
         return {"type": "text", "content": "👍 Glad to hear that! Let’s keep going."}
-    elif any(kw in text for kw in ["bad", "not good", "sad", "unhappy", "tired"]):
+    elif any(kw in text for kw in ["bad", "not", "sad", "unhappy", "tired"]):
         return {"type": "text", "content": "💙 I'm sorry to hear that. Remember, tough days don’t last forever. You’ve got this! 💪"}
     elif any(kw in text for kw in ["bye", "see you", "goodbye"]):
         return {"type": "text", "content": "👋 Bye! Have a nice day at university!"}
