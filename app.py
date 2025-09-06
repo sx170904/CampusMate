@@ -12,7 +12,7 @@ if "messages" not in st.session_state:
  # initial welcome message
     welcome_msg = {
         "role": "assistant",
-        "content": "🎓 Hi! I'm your CampusMate, your university  assistant. You can ask me question about UTAR, e.g., 'Where is the library?'",
+        "content": "🎓 Hi! I'm your CampusMate, your university  assistant. You can ask me question about UTAR, e.g., 'Where is the library?','can i see the campus map?'",
         "type": "text"
     }
     st.session_state.messages.append(welcome_msg)
